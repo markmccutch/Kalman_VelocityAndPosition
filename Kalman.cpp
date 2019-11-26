@@ -40,4 +40,18 @@ float Kalman::getControlVector(){
 };
 
 //setEstimatedCovariance
-void setEstimatedCovariance()
+void setEstimatedCovariance(float cov[2][2]){
+  this->_P[0][0] = cov[0][0];
+  this->_P[0][1] = cov[0][1];
+  this->_P[1][0] = cov[1][0];
+  this->_P[1][1] = cov[1][1];
+
+};
+//TODO:
+//getEstimatedCovariance
+//ISSUE: no direct way to return an array, and I dont think I need to waste memory on this feature
+
+//setProcessError
+void setProcessError(float err_q){
+  this->_Q =
+};
